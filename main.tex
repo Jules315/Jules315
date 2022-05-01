@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage{enumitem} % to change appearance of enum and item environments
+\usepackage{framed}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{minted}
+
+%\usepackage{yhmath}
+% adjust the margins using the geometry package
+\usepackage[left=0.75in, right=0.75in, top=0.75in, bottom=0.75in]{geometry}
+\usepackage[parfill]{parskip}
+ %\usepackage{mathpazo}
+%\usepackage{euler}
+
+% customize the headers using the fancyhdr package
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{hyperref}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newenvironment{hwproblem}[1]{{\large \bfseries Problem #1\,:} \begin{trivlist}\item[]\vspace{-0.5ex}}{\end{trivlist}\vspace{3ex}}
+\newenvironment{hwproblemquestion}[1]{{\bfseries Question #1\,:} \begin{trivlist}\item[]\vspace{-1.5ex}}{\end{trivlist}\vspace{3ex}}
+\newenvironment{lecexercise}[1]{{\large \bfseries Exercise #1\,:} \begin{trivlist}\item[]\vspace{-0.5ex}}{\end{trivlist}\vspace{3ex}}
+\newenvironment{note}[1]{{\large \bfseries Note #1\,:} \begin{trivlist}\item[]\vspace{-0.5ex}}{\end{trivlist}\vspace{3ex}}
+\newenvironment{hwsubpart}[1]{{\bfseries #1\,:} \begin{trivlist}\item[]\vspace{-0.5ex}}{\end{trivlist}\vspace{3ex}}
+
+
+% create theorem style
+\newtheoremstyle{break}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+\newtheorem{hwquestion}{Question}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{subsection}
+
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{subsection}
+
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{subsection}
+
+
+\newtheorem*{definition}{Definition}
+
+\newtheorem*{note*}{Note}
+
+\newtheorem*{remark}{Remark}
+
+\newtheorem*{hint}{Hint}
+
+\newtheorem*{example}{Example}
+
+\numberwithin{equation}{subsection}
+
+%\addbibresource{ref.bib} %Imports bibliography file
+
+% customize enumerate and itemize environments
+\setlist[itemize]{labelsep=1ex,itemsep=1.5ex,parsep=0ex,leftmargin=4ex,topsep=0.5ex}
+\setlist[enumerate]{labelsep=1ex,itemsep=1.5ex,parsep=0ex,leftmargin=4ex,topsep=0.5ex}
+
+
+\rhead{Behavioral Economics}
+\lhead{Papers} 
+
+
+
+\lfoot{}
+\cfoot{} 
+\rfoot{\thepage}
+
+\setlength{\headheight}{15pt}
+\title{Papers} 
+\date{}
+\author{}
+
+\begin{document}
+
+\section{Behavioral game theory}
+
+\subsection{Dufwenberg (2002): Marital investments, time consistency and emotions}
+
+\subsubsection{general}
+\begin{itemize}
+    \item Introduces 'psychological game theory' where parameters enter the utility functions that try to model the (dis)utility of emotional responses.
+    \item In Duwenberg's marital investment game proclivity to guilt, denoted by $\gamma \geq 0$, is such a parameter. The effect of the parameter depends on beliefs.
+    \item the probability the husband stays is given by $\tau \in [0,1]$, the first order belief of the wife that the husband stays is given by $\tau^{\prime} \in [0,1]$ (wife's trust), the second order belief of the Husband (husband's expectation of the wife's trust) is given by $\tau^{\prime\prime} \in [0,1]$.
+    \item Sub-game perfection leads to the inefficient outcome where the Wife chooses not to marry (shown in game without guilt, where also nature first decides whether its a good or bad match). However empirical evidence on trust games shows that often efficient outcomes can be sustained.
+    \item Dufwenberg shows that the efficient equilibrium can be sustained when the husband has a  sufficiently high proclivity to guilt.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth/3]{dufwenberg_game.png}
+    \caption{Dufwenberg's trust game}
+    \label{combine}
+\end{figure}
+
+\end{document}
